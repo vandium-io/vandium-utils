@@ -1,0 +1,29 @@
+{
+  "name": "vandium-utils",
+  "version": "1.0.0",
+  "description": "vandium common utility functions",
+  "keywords": [
+    "JWT",
+    "AWS",
+    "Lambda",
+    "util",
+    "utility",
+    "serverless"
+  ],
+  "main": "lib/utils.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vandium-io/vandium-utils.git"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --recursive",
+    "coverage": "./node_modules/.bin/istanbul cover node_modules/mocha/bin/_mocha -- -R spec --recursive"
+  },
+  "author": "Vandium Software Inc.",
+  "license": "BSD-3-Clause",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "istanbul": "^0.4.3",
+    "mocha": "^2.5.3"
+  }
+}
