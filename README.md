@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/vandium-io/lov.svg?branch=master)](https://travis-ci.org/vandium-io/vandium-utils)
+[![Build Status](https://travis-ci.org/vandium-io/vandium-utils.svg?branch=master)](https://travis-ci.org/vandium-io/vandium-utils)
 [![npm version](https://badge.fury.io/js/vandium-utils.svg)](https://badge.fury.io/js/vandium-utils)
 
 # vandium-utils
