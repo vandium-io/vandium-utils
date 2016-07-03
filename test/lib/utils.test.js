@@ -2,9 +2,9 @@
 
 /*jshint expr: true*/
 
-var expect = require( 'chai' ).expect;
+const expect = require( 'chai' ).expect;
 
-var utils = require( '../../lib/utils' );
+const utils = require( '../../lib/utils' );
 
 describe( 'lib/utils', function() {
 
@@ -50,42 +50,17 @@ describe( 'lib/utils', function() {
 
     describe( '.isObject', function() {
 
-        it( 'object', function() {
+        it( 'normal operation', function() {
 
-            expect( utils.isObject( {} ) ).to.be.true;
-        });
-
-        it( 'function', function() {
-
-            expect( utils.isObject( function() {} ) ).to.be.true;
-        });
-
-        it( 'array', function() {
-
-            expect( utils.isObject( [ 1, 2, 4 ] ) ).to.be.true;
-        });
-
-        it( 'other', function() {
-
-            expect( utils.isObject( 1234 ) ).to.be.false;
-            expect( utils.isObject( "fred" ) ).to.be.false;
-            expect( utils.isObject() ).to.be.false;
+            expect( utils.isObject ).to.equal( require( '../../lib/is_object' ) );
         });
     });
 
     describe( '.isString', function() {
 
-        it( 'string', function() {
+        it( 'normal operation', function() {
 
-            expect( utils.isString( "test" ) ).to.be.true;
-            expect( utils.isString( new Buffer( "string" ).toString() ) ).to.be.true;
-        });
-
-        it( 'other', function() {
-
-            expect( utils.isString( 1234 ) ).to.be.false;
-            expect( utils.isString( {} ) ).to.be.false;
-            expect( utils.isString( describe ) ).to.be.false;
+            expect( utils.isString ).to.equal( require( '../../lib/is_string' ) );
         });
     });
 
@@ -104,35 +79,17 @@ describe( 'lib/utils', function() {
 
     describe( '.parseBoolean', function() {
 
-        [ true, 'yes', 'On', 'True', 'Yes', 'true' ].forEach( function( value ) {
+        it( 'normal operation', function() {
 
-            it( 'value: ' + value, function() {
-
-                expect( utils.parseBoolean( value ) ).to.be.true;
-            })
+            expect( utils.parseBoolean ).to.equal( require( '../../lib/parse_boolean' ) );
         });
+    });
 
-        [ false, 'no', 'off', 'False', 'No', 'false' ].forEach( function( value ) {
+    describe( '.templateString', function() {
 
-            it( 'value: ' + value, function() {
+        it( 'normal operation', function() {
 
-                expect( utils.parseBoolean( value ) ).to.be.false;
-            })
-        });
-
-        it( 'unknown value', function() {
-
-            expect( utils.parseBoolean( 'whatever' ) ).to.be.false;
-        });
-
-        it( 'null value', function() {
-
-            expect( utils.parseBoolean( null ) ).to.be.false;
-        });
-
-        it( 'undefined value', function() {
-
-            expect( utils.parseBoolean() ).to.be.false;
+            expect( utils.templateString ).to.equal( require( '../../lib/template_string' ) );
         });
     });
 });
