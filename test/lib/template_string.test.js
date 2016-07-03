@@ -14,6 +14,7 @@ describe( 'lib/template_string', function() {
         [ 'multiple values', '${last}, ${first}', { first: 'Fred', last: 'Smith' }, 'Smith, Fred' ],
         [ 'multiple values, via container object', '${user.last}, ${user.first}',
             { user: { first: 'Fred', last: 'Smith' } }, 'Smith, Fred' ],
+        [ 'non-string values', 'I am ${age} years old', { age: 42 }, 'I am 42 years old' ],
         [ 'missing value, simple case', 'Hello ${name}', { person: 'Fred' }, 'Hello undefined' ],
         [ 'missing value, object case', 'Hello ${person.name}', { person: { first: 'Fred' } }, 'Hello undefined' ],
         [ 'missing value, value is not object', 'Hello ${person.name}', { person: 'Fred' }, 'Hello undefined' ],
