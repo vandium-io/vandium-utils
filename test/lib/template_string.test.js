@@ -10,6 +10,7 @@ describe( 'lib/template_string', function() {
 
     [
         [ 'basic case', 'Hello ${name}', { name: 'Fred' }, 'Hello Fred' ],
+        [ 'basic case with spaces', 'Hello ${ name }', { name: 'Fred' }, 'Hello Fred' ],
         [ 'template string only', '${name}', { name: 'Fred' }, 'Fred' ],
         [ 'multiple values', '${last}, ${first}', { first: 'Fred', last: 'Smith' }, 'Smith, Fred' ],
         [ 'multiple values, via container object', '${user.last}, ${user.first}',
