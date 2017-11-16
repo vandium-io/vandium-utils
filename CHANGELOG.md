@@ -1,5 +1,13 @@
 # Change Log
 
+## 1.2.0 (2017-11-16)
+
+Fix:
+
+* `clone()` only clones objects and returns value passed when called with constants,
+null or undefined
+
+
 ## 1.1.1 (2016-10-17)
 
 Fix:
