@@ -36,7 +36,11 @@ describe( 'lib/utils', function() {
         it( 'promise', function() {
 
             expect( utils.isPromise( Promise.resolve() ) ).to.be.true;
-            expect( utils.isPromise( Promise.reject() ) ).to.be.true;
+
+            let rejected = Promise.reject();
+            expect( utils.isPromise( rejected ) ).to.be.true;
+            rejected.catch( () => {} );   // handle rejection
+
             expect( utils.isPromise( new Promise( function() {}) ) ).to.be.true;
         });
 
