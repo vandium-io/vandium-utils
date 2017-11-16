@@ -2,6 +2,8 @@ examples
 
 coverage
 
+.nyc_output
+
 benchmark
 
 test
