@@ -66,7 +66,7 @@ describe( 'lib/utils', function() {
 
     describe( '.clone', function() {
 
-        it( 'normal operation', function() {
+        it( 'with object', function() {
 
             let v1 = { name: 'fred', age: 42 };
 
@@ -74,6 +74,46 @@ describe( 'lib/utils', function() {
 
             expect( v1 ).to.not.equal( v2 );
             expect( v1 ).to.eql( v2 );
+        });
+
+        it( 'with constant string', function() {
+
+            let v1 = 'fred'
+
+            let v2 = utils.clone( v1 );
+
+            expect( v1 ).to.equal( v2 );
+            expect( v1 === v2 ).to.be.true;
+        });
+
+        it( 'with constant int', function() {
+
+            let v1 = 1234;
+
+            let v2 = utils.clone( v1 );
+
+            expect( v1 ).to.equal( v2 );
+            expect( v1 === v2 ).to.be.true;
+        });
+
+        it( 'with null', function() {
+
+            let v1 = null;
+
+            let v2 = utils.clone( v1 );
+
+            expect( v1 ).to.equal( v2 );
+            expect( v1 ).to.be.null;
+        });
+
+        it( 'with undefined', function() {
+
+            let v1 = null;
+
+            let v2 = utils.clone( v1 );
+
+            expect( v1 ).to.equal( v2 );
+            expect( v1 ).to.not.exist;
         });
     });
 
