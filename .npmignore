@@ -1,15 +1,2 @@
-examples
-
-coverage
-
-.nyc_output
-
-benchmark
-
-test
-
-.travis.yml
-
-.jshintrc
-
-.istanbul.yml
+*
+!lib/**
