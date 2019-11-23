@@ -1,6 +1,6 @@
 {
   "name": "vandium-utils",
-  "version": "1.2.0",
+  "version": "2.0.0",
   "description": "vandium common utility functions",
   "keywords": [
     "JWT",
@@ -11,19 +11,24 @@
     "serverless"
   ],
   "main": "lib/utils.js",
+  "engines": {
+    "node": ">=10.16"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/vandium-io/vandium-utils.git"
   },
   "scripts": {
-    "test": "nyc ./node_modules/.bin/mocha --recursive"
+      "test": "nyc mocha 'lib/**/__tests__/*' --recursive"
   },
   "author": "Vandium Software Inc.",
   "license": "BSD-3-Clause",
+  "files": [
+    "/lib"
+  ],
   "devDependencies": {
     "chai": "^4.1.2",
-    "istanbul": "^0.4.5",
-    "mocha": "^4.0.1",
-    "nyc": "^11.3.0"
+    "mocha": "^6.2.2",
+    "nyc": "^14.1.1"
   }
 }

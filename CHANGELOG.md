@@ -1,5 +1,16 @@
 # Change Log
 
+## 2.0.0 (2019-11-23)
+
+Updated:
+
+* Changed target version of Node.js to 10.x
+
+Internal:
+
+* Updated test deps
+* Refactored tests
+
 ## 1.2.0 (2017-11-16)
 
 Fix:
